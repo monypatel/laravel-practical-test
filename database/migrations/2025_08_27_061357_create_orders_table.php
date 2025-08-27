@@ -14,8 +14,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->increments('order_id');
-            $table->integer('customer_id');
+            $table->unsignedInteger('order_id', true);
+            $table->unsignedInteger('customer_id');
             $table->date('order_date');
             $table->decimal('amount',10,2);
             $table->foreign('customer_id')->references('customer_id')->on('customers');

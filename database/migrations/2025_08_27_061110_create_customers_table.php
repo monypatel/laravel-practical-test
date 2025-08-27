@@ -13,7 +13,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('customers', function (Blueprint $table) {
-            $table->increments('customer_id');
+            $table->unsignedInteger('customer_id', true);
             $table->string('name',100);
             $table->string('email',100);
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
