@@ -38,6 +38,7 @@ If you make changes to your migration files and need to rebuild the database fro
 ```sh
 php artisan migrate:fresh --seed
 php artisan passport:install
+php artisan serve
 ```
 
 ## Postman Collection
